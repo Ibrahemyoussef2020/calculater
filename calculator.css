@@ -38,13 +38,17 @@ body {
 .calculator header{
 
 	margin-bottom: 10px;
+
 	
 }
 
 .calculator header input {
-
+    
+    display: block;
 	border-radius: 5px;
 	padding: 5px 0;
+	width: 95%;
+	margin:15px auto;
 
 }
 

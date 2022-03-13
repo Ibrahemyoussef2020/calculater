@@ -11,37 +11,44 @@
 </head>
 <body> 
 	<div class="child-body">
-	  <form class="calculator" autocomplete="off">	
+
+	  <div class="calculator">
+
 		<header>
-			<input id="screen" autofocus = "autofocus" >
+			<input id="screen" autofocus = "autofocus" autocomplete="off">
+      <span type="button" id="on">off/on</span>
 		</header>
-		<section>
+
+		<section class="vals">
 			<input type="button"  value="C" id="close">
-			<input type="button"  value="%" class="bot">
 			<input type="button"  value="D"  id="delete">
-			<input type="button"  value="/" class="bot">	
+      <input type="button"  value="." class="bot">
+			<button type="button"  value="/" class="bot">÷</button>
 		</section>
-		<section>
+
+		<section class="buttons">
 			<input type="button"  value="7" class="bot">
 			<input type="button"  value="8" class="bot">
-			<input type="button"  value="9" class="bot">
-			<input type="button"  value="*" class="bot" >
+      <input type="button"  value="9" class="bot">
+      <button type="button"  value="*" class="bot">×</button>
 			<input type="button"  value="4" class="bot">
 			<input type="button"  value="5" class="bot">
 			<input type="button"  value="6" class="bot">
-			<input type="button"  value="-" class="bot">
+      <button type="button"  value="-" class="bot">-</button>
 			<input type="button"  value="1" class="bot">
 			<input type="button"  value="2" class="bot">
 			<input type="button"  value="3" class="bot">
-			<input type="button"  value="+" class="bot">
-		</section>	
+      <input type="button"  value="+" class="bot">
+		</section>
+
 		<footer>	 	
 			<input type="button"  value="0" class="bot">
-			<input type="button"  value="." class="bot">
-			<input type="button"  value="=" id="eq">
+			<input type="button"  value="("   class="bot">
+      <input type="button"  value=")"   class="bot">
+      <input type="button"  value="=" id="eq">
 		</footer>					
 				
-	  </form>	
+    </div>	
 	</div> <!--
 	   <article>
        <form>

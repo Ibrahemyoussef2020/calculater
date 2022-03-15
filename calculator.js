@@ -70,11 +70,10 @@ myEqual.onclick = function (){
     if(mScreen.value === ""){}
 
     else {
-      
-     mCalc.style.transform = "rotatex(360deg)";
-   
-   //   mCalc.placeholder = ""; 
+          
       mScreen.value = mCalc.placeholder;
+
+      mCalc.placeholder = "";
      }   
 }
 //////////////////////////////////////////////////

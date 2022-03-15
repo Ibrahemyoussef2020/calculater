@@ -7,37 +7,50 @@
   	<meta name="author" content="ibrahim">
   	<meta name="viewport" content="width=device-width ,height=device-height , initial-scale=1.0, maximum-scale=1.0 , minimum-scale=1.0, user-scalable=no"/>    
 	<title>calculator</title>
-	<link rel="stylesheet" type="text/css" href="calculator.css">
+  <link rel="stylesheet" type="text/css" href="css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="css/calculator.css">
 </head>
 <body> 
-	<div class="child-body">
+<div class="child-body">
 
-	  <div class="calculator">
+  <div class="calculator">
 
 		<header>
 			<input id="screen" autofocus = "autofocus" autocomplete="off">
-      <span type="button" id="on">off/on</span>
+      <input id="calc"  autocomplete="off">
 		</header>
 
-		<section class="vals">
-			<input type="button"  value="C" id="close">
-			<input type="button"  value="D"  id="delete">
+    <div class="on-off">
+      <button type="button" id="on" class="on">&#xf011;</button>
+      <button type="button" value="sin" onclick="sin()" class="nan"> sin</button>
+      <button type="button" value="int" onclick="int()" class="nan"> int </button>
+      <input type="button"  value="Cel" id="close" class="clear nan">
+			<input type="button"  value="Del"  id="delete" class="clear nan">  
+    </div>
+
+		<section class="vals">  
       <input type="button"  value="." class="bot">
-			<button type="button"  value="/" class="bot">÷</button>
+      <button type="button" value="cos" onclick="cos()" class="nan"> cos</button>
+      <button type="button" value="tan" onclick="tan()" class="nan"> tan</button>
+      <button type="button" value="x^3" onclick="pow3()" class="nan"> x<sup>3</button>
+      <button type="button"  value="-" class="bot">-</button>
 		</section>
 
 		<section class="buttons">
 			<input type="button"  value="7" class="bot">
 			<input type="button"  value="8" class="bot">
       <input type="button"  value="9" class="bot">
+      <button type="button" value="x^2" onclick="pow2()" class="nan"> x<sup>2 </button>
       <button type="button"  value="*" class="bot">×</button>
 			<input type="button"  value="4" class="bot">
 			<input type="button"  value="5" class="bot">
 			<input type="button"  value="6" class="bot">
-      <button type="button"  value="-" class="bot">-</button>
+      <button type="button" value="sqrt2" onclick="sqrt2()" class="bold nan"> &radic; </button> 
+      <button type="button"  value="/" class="bot">÷</button>
 			<input type="button"  value="1" class="bot">
 			<input type="button"  value="2" class="bot">
 			<input type="button"  value="3" class="bot">
+      <button type="button" value="sqrt3" onclick="sqrt3()" class="nan"> &#8731; </button>
       <input type="button"  value="+" class="bot">
 		</section>
 
@@ -45,50 +58,12 @@
 			<input type="button"  value="0" class="bot">
 			<input type="button"  value="("   class="bot">
       <input type="button"  value=")"   class="bot">
-      <input type="button"  value="=" id="eq">
+      <button type="button" value="%" onclick="number(value)" class="nan"> % </button>
+      <input type="button"  value="=" id="eq" class="eq nan">
 		</footer>					
 				
     </div>	
-	</div> <!--
-	   <article>
-       <form>
-       <header>
-           <input type="text"id="type"autocomplete="off"placeholder="Enter A Number">
-       </header> 
-       <section>
-           <div class="first">
-              <input type="button"value="7"class="give">
-              <input type="button"value="8"class="give">
-              <input type="button"value="9"class="give">
-              <input type="button"value="C"class="one"id="clear">
-            <input type="button"value="D"class="one"id="del1">
-           </div>
-           
-           <div class="first">
-              <input type="button"value="4"class="give">
-              <input type="button"value="5"class="give">
-              <input type="button"value="6"class="give">
-              <input type="button"value="*"class="times give">
-              <input type="button"value="/"class="slach give">
-           </div>
-           
-           <div class="first">
-              <input type="button"value="1"class="give">
-              <input type="button"value="2"class="give">
-              <input type="button"value="3"class="give">
-              <input type="button"value="+"class="give">
-              <input type="button"value="-"class="slach2 give">
-           </div>
-           
-           <div class="first">
-              <input type="button"value="0"class="zero give">
-              <input type="button"value="."class="point give">
-              <input type="button"value="="class="equal"id="eq">
-           </div>
-       </section>
-       </form>
-   </article>    
--->
+	</div>
 
   <script type="text/javascript" src="calculator.js"></script>
 </body>

@@ -69,7 +69,7 @@ myEqual.onclick = function (){
   next = parseInt(mScreen.value[mScreen.value.length - 1]);
     if(mScreen.value === ""){}
 
-    else {
+    else if(mCalc.placeholder !==""){
           
       mScreen.value = mCalc.placeholder;
 
@@ -144,43 +144,69 @@ let onOff = document.getElementById("on");
 //    sin,cos,tan,pow2,pow3,sqart2,sqart3,int       //                                   //
 //////////////////////////////////////////////////////
 function sin(){
-  myEqual.click();
-	mScreen.value.value=Math.sin(mScreen.value);
+  if(mCalc.placeholder === ""){
+    mScreen.value=Math.sin(mScreen.value);
+    mCalc.placeholder=Math.sin(mScreen.value);
+  }else{
+    mScreen.value = Math.sin(mCalc.placeholder);
+  }
 }
-
 function cos(){
-  myEqual.click();
-  mScreen.value=Math.cos(mScreen.value);
+  if(mCalc.placeholder === ""){
+    mScreen.value=Math.cos(mScreen.value);
+    mCalc.placeholder=Math.cos(mScreen.value);
+  }else{
+    mScreen.value = Math.cos(mCalc.placeholder);
+  }
 }
-
-	function tan(){
-    myEqual.click();
-	  mScreen.value=Math.tan(mScreen.value);
-	}
-	function pow2(){
-    myEqual.click();
-	  mScreen.value = Math.pow(mScreen.value, 2);
-	}
-
-	function pow3(){
-    myEqual.click();
-	  mScreen.value.value = Math.pow(mScreen.value, 3);
-	}
-
-	function sqrt2(){
-    myEqual.click();
-	  mScreen.value=Math.sqrt(mScreen.value, 2);
-	}
-
-	function sqrt3(){
-    myEqual.click();
-	  mScreen.value=Math.sqrt(mScreen.value, 3);
-	}
-  function int(){
-    myEqual.click();
-	  mScreen.value=Math.round(mScreen.value);
+function tan(){
+  if(mCalc.placeholder === ""){
+    mScreen.value=Math.tan(mScreen.value);
+    mCalc.placeholder=Math.tan(mScreen.value);
+  }else{
+    mScreen.value = Math.tan(mCalc.placeholder);
+  }
+}
+function pow2(){
+  if(mCalc.placeholder === ""){
+    mScreen.value=Math.pow(mScreen.value, 2);
+    mCalc.placeholder=Math.pow(mScreen.value, 2);
+  }else{
+    mScreen.value = Math.pow(mCalc.placeholder,2);
+  }
+}
+function pow3(){
+  if(mCalc.placeholder === ""){
+    mScreen.value=Math.pow(mScreen.value, 3);
+    mCalc.placeholder=Math.pow(mScreen.value, 3);
+  }else{
+    mScreen.value = Math.pow(mCalc.placeholder,3);
+  }
+}
+function sqrt2(){
+  if(mCalc.placeholder === ""){
+    mScreen.value=Math.sqrt(mScreen.value, 2);
+    mCalc.placeholder=Math.sqrt(mScreen.value, 2);
+  }else{
+    mScreen.value = Math.sqrt(mCalc.placeholder,2);
+  }
+}
+function sqrt3(){
+  if(mCalc.placeholder === ""){
+    mScreen.value=Math.sqrt(mScreen.value, 3);
+    mCalc.placeholder=Math.sqrt(mScreen.value, 3);
+  }else{
+    mScreen.value = Math.sqrt(mCalc.placeholder,3);
+  }
+}
+function int(){
+  if(mCalc.placeholder === ""){
+    mScreen.value=Math.round(mScreen.value);
     mCalc.placeholder=Math.round(mScreen.value);
-	}
+  }else{
+    mScreen.value = Math.round(mCalc.placeholder);
+  }
+}
 /////////////////////////////////////////////////////
 
 
